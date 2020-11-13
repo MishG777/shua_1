@@ -18,3 +18,4 @@ Route::get('/z',[\App\Http\Controllers\ApplicantController::class, 'index']);
 Route::get('/{id}', [\App\Http\Controllers\ApplicantController::class, 'show'])->name('applicant.show');
 Route::get('/{id}/edit', [\App\Http\Controllers\ApplicantController::class, 'edit'])->name('applicant.edit');
 Route::put('/{id}/update', [\App\Http\Controllers\ApplicantController::class, 'update'])->name('applicant.update');
+Route::put('/{id}/save', [\App\Http\Controllers\ApplicantController::class, 'save'])->name('applicant.save');

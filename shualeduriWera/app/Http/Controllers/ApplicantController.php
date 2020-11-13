@@ -9,7 +9,6 @@ class ApplicantController extends Controller
 {
     public function index(){
         $Applicant=Applicant::all();
-
         return view('applicant_list')->with('applicant_list', $Applicant);
     }
     public function show($id){
@@ -25,7 +24,9 @@ class ApplicantController extends Controller
         $Applicant = Applicant::findOrFail($id);
         $Applicant->update($request->all());
         return redirect()->back();
+
     }
+
     public function save (Request $request){
         request()->validate([
             'name'=> 'required',
