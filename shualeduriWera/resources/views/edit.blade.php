@@ -15,37 +15,36 @@
             @method('PUT')
             <div class="box-body">
                 <div class="form-group">
-                    <input type="text" class="bg-gray-800 rounded-full w-64 px-4 py-1" name="name" value="{{old('name', $applicant_list->name)}}" required>
+                    <input type="text" class="bg-gray-800 rounded-full w-64 px-4 py-1" name="name" value="{{old('name', $applicant_list->name)}}" >
                     @if($errors->first('name'))
                     <p class="text-danger">{{$errors->first('name')}}</p>
                     @endif
                 </div>
                 <div class="form-group">
-                    <input type="text" class="bg-gray-800 rounded-full w-64 px-4 py-1" name="surname" value="{{old('surname', $applicant_list->surname)}}" required>
+                    <input type="text" class="bg-gray-800 rounded-full w-64 px-4 py-1" name="surname" value="{{old('surname', $applicant_list->surname)}}">
                     @if($errors->first('surname'))
                         <p class="text-danger">{{$errors->first('surname')}}</p>
                     @endif
                 </div>
                 <div class="form-group">
-                    <input type="text" class="bg-gray-800 rounded-full w-64 px-4 py-1" name="position" value="{{old('position', $applicant_list->position)}}" required>
+                    <input type="text" class="bg-gray-800 rounded-full w-64 px-4 py-1" name="position" value="{{old('position', $applicant_list->position)}}" >
                     @if($errors->first('position'))
                         <p class="text-danger">{{$errors->first('position')}}</p>
                     @endif
                 </div>
                 <div class="form-group">
-                    <input type="text" class="bg-gray-800 rounded-full w-64 px-4 py-1" name="phone" value="{{old('phone', $applicant_list->phone)}}" required>
+                    <input type="text" class="bg-gray-800 rounded-full w-64 px-4 py-1" name="phone" value="{{old('phone', $applicant_list->phone)}}">
                     @if($errors->first('phone'))
                         <p class="text-danger">{{$errors->first('phone')}}</p>
                     @endif
                 </div>
                 <div class="form-group">
 
-                    <input type="text" class="bg-gray-800 rounded-full w-64 px-4 py-1" name="is_hired" value="{{old('is_hired', $applicant_list->is_hired)}}" required>
+                    <input type="text" class="bg-gray-800 rounded-full w-64 px-4 py-1" name="is_hired" value="{{old('is_hired', $applicant_list->is_hired)}}">
 
                     @if($errors->first('is_hired'))
                         <p class="text-danger">{{$errors->first('is_hired')}}</p>
                     @endif
-                        <button type="submit" class="btn bg-gray-800 mx-40">Hired/not Hired</button>
                 </div>
             </div>
             <input type="hidden" name="_token" id="csrf_token" value="{{csrf_token()}}">

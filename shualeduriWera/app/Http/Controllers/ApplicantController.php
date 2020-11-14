@@ -19,22 +19,15 @@ class ApplicantController extends Controller
         $Applicant=Applicant::findOrFail($id);
         return view('edit')->with('applicant_list',$Applicant);
     }
-    public function update(Request $request, $id)
-    {
-        $Applicant = Applicant::findOrFail($id);
-        $Applicant->update($request->all());
-        return redirect()->back();
-
-    }
-
-    public function save (Request $request){
+    public function update(Request $request, $id){
         request()->validate([
-            'name'=> 'required',
-            'surname'=> 'required',
-            'position'=> 'required',
-            'phone' => 'required',
-            'is_hired'=> 'required'
+            'name'=>'required',
+            'surname'=>'required',
+            'position'=>'required',
+            'phone'=>'required'
         ]);
-
+        $applicant = Applicant::findOrFail($id);
+        $applicant->update($request->all());
+        return redirect()->back();
     }
 }

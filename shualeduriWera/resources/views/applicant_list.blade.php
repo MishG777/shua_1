@@ -15,7 +15,11 @@
                                     <li>username-{{$applicant->surname}},</li>
                                     <li>position-{{$applicant->position}},</li>
                                     <li>phone-{{$applicant->phone}},</li>
-                                    <li>is_hired-{{$applicant->is_hired}},</li>
+                                    @if($applicant->is_hired)
+                                        <li>is_hired-hired,</li>
+                                    @else
+                                        <li>is_hired-not_hired,</li>
+                                    @endif
                                 </ul>
                             </div>
                             <div class="ml-4 text-lg leading-7 font-semibold">
